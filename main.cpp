@@ -1,4 +1,7 @@
 #include <iostream>
+#define MaxVer 100
+#define MaxSize 100
+
 
 typedef struct gEdge {
     int child, weight;
@@ -6,8 +9,13 @@ typedef struct gEdge {
 }GEdge, *GEdgePtr ;
 
 typedef struct{
-    char id[CHAR_MAX+1], colour;
+    char id[MaxSize+1], colour;
     int parent, cost, inDegree;
     GEdgePtr firstDegree;
 
 }GVertex;
+
+typedef struct graph {
+    int numV;
+    GVertex vertex[MaxVer+1];
+}*Graph;
