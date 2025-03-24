@@ -3,5 +3,11 @@
 typedef struct gEdge {
     int child, weight;
     struct gEdge *nextEdge;
-}gEdge, *gEdgePtr ;
+}GEdge, *GEdgePtr ;
 
+typedef struct{
+    char id[CHAR_MAX+1], colour;
+    int parent, cost, inDegree;
+    GEdgePtr firstDegree;
+
+}GVertex;
