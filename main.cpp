@@ -19,3 +19,12 @@ typedef struct graph {
     int numV;
     GVertex vertex[MaxVer+1];
 }*Graph;
+
+//function to create a new edge
+GEdgePtr newGEdge(int c, int w) {
+    GEdgePtr p = (GEdgePtr)malloc(sizeof(GEdge));
+    p->child = c;
+    p->weight=w;
+    p->nextEdge=nullptr;
+    return p;
+}
